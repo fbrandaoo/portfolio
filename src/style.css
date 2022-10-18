@@ -19,7 +19,7 @@
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    transition: background-color 200ms ease-in-out;
+    transition: background-color, color 200ms ease-in-out;
 }
 
 html {
@@ -76,7 +76,20 @@ body.dark {
     visibility: hidden;
 }
 
+.fa-moon {
+    color: #cccccc;
+    position: absolute;
+}
+
+.fa-sun {
+    color: #101010;
+    position: absolute;
+}
+
 .chk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;
     height: 32px;
     border-radius: 100%;
@@ -112,6 +125,10 @@ body.dark {
     color: var(--text-color);
     font-size: 300%;
     margin-bottom: 100px;
+}
+
+.titulo > span {
+    color: var(--detail)
 }
 
 #Sobre, #Contato, #Portfolio {
