@@ -1,12 +1,29 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+:root {
+    --background: #eeeeee;
+    --header-footer: #cccccc;
+    --text-color: #0f0f0f;
+    --text-color2: #3d3d3d;
+    --detail: #aa00aa;
+    --darkmode: #500050;
+}
+
+
 
 * {
-    scroll-padding-top: 75px;
-    font-family: 'Roboto';
+    scroll-padding-top: 100px;
+    font-family: 'Poppins';
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    transition: background-color 200ms ease-in-out;
+}
+
+html {
+    transition: --background 500ms;
 }
 
 html, body {
@@ -14,12 +31,21 @@ html, body {
     height: 137%;
 }
 
+body.dark {
+    --background: #101010;
+    --header-footer: #151515;
+    --text-color: #eeeeee;
+    --text-color2: #cccccc;
+    --detail: #018fea;
+    --darkmode: #ffae00;
+}
+
 .cabecalho {
     position: sticky;
     top: 0;
     width: 100%;
     height: 75px;
-    background-color: #151515;
+    background-color: var(--header-footer);
 }
 
 .menu {
@@ -36,19 +62,43 @@ html, body {
 }
 
 .lista a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 .lista a:hover {
-    color: #018fea
+    color: var(--detail)
+}
+
+#darkmode-toggle {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.chk {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: var(--darkmode);
+    transition: 100ms transform;
+}
+
+.chk:hover {
+    transform: scale(1.05);
+    
+}
+
+.chk:active {
+    transform: scale(0.9);
 }
 
 .conteudo {
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #101010;
+    background-color: var(--background);
     justify-content: center;
     align-items: center
 }
@@ -59,21 +109,17 @@ html, body {
 }
 
 .titulo {
-    color: #fff;
+    color: var(--text-color);
     font-size: 300%;
     margin-bottom: 100px;
 }
 
-.titulo:nth-child(2) {
-    color: #018fea;
-}
-
-#sobre, #contato, #portfolio {
+#Sobre, #Contato, #Portfolio {
     padding: 0 25px;
-    color:#fff;
+    color:var(--text-color);
     font-size: 36px;
     font-weight: bold;
-    border-left: 7.5px solid #018fea;
+    border-left: 7.5px solid var(--detail);
 }
 
 .sobre, .contato, .portfolio {
@@ -85,11 +131,11 @@ html, body {
 
 p {
     margin: 20px 0;
-    color: rgb(175, 175, 175);
+    color: var(--text-color2);
 }
 
 .rodape {
     width: 100%;
     height: 75px;
-    background-color: #151515;
+    background-color: var(--header-footer);
 }
