@@ -1,6 +1,6 @@
 let chk = document.querySelector('#darkmode-toggle')
-let sun = document.querySelector('.fa-sun')
-let moon = document.querySelector('.fa-moon')
+let sun = document.querySelector('.sun')
+let moon = document.querySelector('.moon')
 
 chk.addEventListener('change', () => {
     document.body.classList.toggle('dark')
