@@ -79,11 +79,13 @@ body.dark {
 .fa-moon {
     color: #cccccc;
     position: absolute;
+    opacity: 100;
 }
 
 .fa-sun {
     color: #101010;
     position: absolute;
+    opacity: 0;
 }
 
 .chk {
