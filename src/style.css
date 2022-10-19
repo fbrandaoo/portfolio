@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-    --background: #eeeeee;
+    --background: #dddddd;
     --header-footer: #cccccc;
     --text-color: #0f0f0f;
     --text-color2: #3d3d3d;
@@ -160,6 +160,12 @@ body.dark {
 .container p {
     margin: 20px 0;
     color: var(--text-color2);
+}
+
+.lista-cursos, a{
+    height: 100px;
+    margin-left: 45px;
+    color: var(--detail);
 }
 
 iframe {
