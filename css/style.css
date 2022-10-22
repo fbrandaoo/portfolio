@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+:root {
+  --background: #dddddd;
+  --header-footer: #cccccc;
+  --text-color: #0f0f0f;
+  --text-color2: #3d3d3d;
+  --detail: #aa00aa;
+  --darkmode: #500050;
+}
+
+* {
+  font-family: "Poppins";
+  scroll-padding-top: 100px;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  transition: background-color, color 200ms ease-in-out;
+}
+
+html {
+  transition: --background 500ms;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+body.dark {
+  --background: #101010;
+  --header-footer: #151515;
+  --text-color: #eeeeee;
+  --text-color2: #cccccc;
+  --detail: #018fea;
+  --darkmode: #ffae00;
+}
+
+.cabecalho {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 75px;
+  background-color: var(--header-footer);
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista {
+  list-style-type: none;
+  margin: auto 5%;
+}
+
+.lista a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.lista a:hover {
+  color: var(--detail);
+}
+
+#darkmode-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.moon {
+  font-size: 100%;
+  color: var(--darkmode);
+  position: absolute;
+  opacity: 100;
+}
+
+.sun {
+  font-size: 100%;
+  color: var(--darkmode);
+  position: absolute;
+  opacity: 0;
+}
+
+.chk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  cursor: pointer;
+  border: solid 1px var(--darkmode);
+  transition: 100ms transform ease-in-out;
+}
+
+.chk:hover {
+  transform: scale(1.05);
+}
+
+.chk:active {
+  transform: scale(0.9);
+}
+
+.conteudo {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--background);
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.container {
+  width: 70%;
+  height: 95%;
+}
+
+.titulo {
+  color: var(--text-color);
+  font-size: 300%;
+  margin-bottom: 100px;
+}
+
+.titulo > span {
+  color: var(--detail);
+}
+
+#Sobre, #Contato, #Portfolio {
+  padding: 0 25px;
+  color: var(--text-color);
+  font-size: 36px;
+  font-weight: bold;
+  border-left: 7.5px solid var(--detail);
+}
+
+.sobre, .contato, .portfolio {
+  min-width: 40%;
+  margin-left: 45px;
+  min-height: 300px;
+  max-height: 300px;
+  font-size: 24px;
+  overflow: auto;
+}
+
+.container p {
+  margin: 20px 0;
+  color: var(--text-color2);
+}
+
+.lista-cursos, a {
+  height: 100px;
+  margin-left: 45px;
+  color: var(--detail);
+}
+
+iframe {
+  margin: 5px auto;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  width: 100%;
+  height: 75px;
+  background-color: var(--header-footer);
+  gap: 10px;
+}
+
+.rodape a, p {
+  text-decoration: none;
+  color: var(--text-color2);
+}
+
+.rodape i {
+  color: var(--detail);
+}/*# sourceMappingURL=style.css.map */
